@@ -19,11 +19,10 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.ops.config import load_config
-from src.models import build_model_from_cfg
-from src.trainers import VAETrainer
-from src.datasets.registry import get_dataset_config
-from datasets.celeb_dataset import CelebDataset
+from utils.config import load_config
+from models import build_model_from_cfg
+from engine.trainers import VAETrainer
+from preprocessors import get_dataset_config, CelebDataset
 
 
 def get_trainer_class(model_name: str):

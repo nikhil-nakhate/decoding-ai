@@ -1,3 +1,9 @@
+"""
+PaliGemma Processor
+
+Preprocessing utilities for PaliGemma vision-language model.
+"""
+
 from typing import Dict, List, Optional, Union, Tuple, Iterable
 import numpy as np
 from PIL import Image
@@ -27,7 +33,7 @@ def rescale(
 
 
 def resize(
-    image: Image,
+    image: Image.Image,
     size: Tuple[int, int],
     resample: Image.Resampling = None,
     reducing_gap: Optional[int] = None,
